@@ -17,4 +17,9 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BlazorDiscovery.Infrastructure.Persistence\BlazorDiscovery.Infrastructure.Persistence.csproj" />
+    <ProjectReference Include="..\BlazorDiscoveryAPI.Application\BlazorDiscoveryAPI.Application.csproj" />
+  </ItemGroup>
+
 </Project>
