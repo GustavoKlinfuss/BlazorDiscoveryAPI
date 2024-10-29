@@ -5,8 +5,8 @@
         Task<IList<T>> Get();
         Task<T?> GetById(Guid id);
         Task Create(T entity);
-        void Update(T entity);
-        void Delete(T entity);
+        Task Update(T entity);
+        Task Delete(T entity);
         Task Commit();
     }
 }

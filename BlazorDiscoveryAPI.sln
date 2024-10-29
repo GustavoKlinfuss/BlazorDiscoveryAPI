@@ -19,7 +19,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorDiscoveryAPI.Domain",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorDiscoveryAPI.Infrastructure", "src\BlazorDiscovertyApi.Infrastructure\BlazorDiscoveryAPI.Infrastructure\BlazorDiscoveryAPI.Infrastructure.csproj", "{52649461-B9AD-451E-8180-FD47371837BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorDiscovery.Infrastructure.Persistence", "src\BlazorDiscovery.Infrastructure.Persistence\BlazorDiscovery.Infrastructure.Persistence.csproj", "{4B9F9FE6-31E2-4B91-B605-060FF9E00999}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorDiscoveryAPI.Infrastructure.Persistence", "src\BlazorDiscoveryAPI.Infrastructure.Persistence\BlazorDiscoveryAPI.Infrastructure.Persistence.csproj", "{4B9F9FE6-31E2-4B91-B605-060FF9E00999}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

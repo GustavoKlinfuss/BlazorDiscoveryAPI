@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace BlazorDiscovery.Infrastructure.Persistence.Mappings
+namespace BlazorDiscoveryAPI.Infrastructure.Persistence.Mappings
 {
     public class PersonPostgresMapping : IEntityTypeConfiguration<Person>
     {
@@ -54,29 +54,29 @@ namespace BlazorDiscovery.Infrastructure.Persistence.Mappings
                 .HasColumnName("email")
                 .HasColumnType("varchar_60");
 
-            builder
-                .OwnsOne(x => x.Address, address =>
-                {
-                    address.Property(y => y.Street)
-                        .HasColumnName("address_street")
-                        .HasColumnType("varchar(80)");
-
-                    address.Property(y => y.Number)
-                        .HasColumnName("address_number")
-                        .HasColumnType("int4");
-
-                    address.Property(y => y.City)
-                        .HasColumnName("address_city")
-                        .HasColumnType("varchar(40)");
-
-                    address.Property(y => y.State)
-                        .HasColumnName("address_state")
-                        .HasColumnType("varchar(20)");
-
-                    address.Property(y => y.ZipCode)
-                        .HasColumnName("address_street")
-                        .HasColumnType("char(8)");
-                });
+            // builder
+            //     .OwnsOne(x => x.Address, address =>
+            //     {
+            //         address.Property(y => y.Street)
+            //             .HasColumnName("address_street")
+            //             .HasColumnType("varchar(80)");
+            //
+            //         address.Property(y => y.Number)
+            //             .HasColumnName("address_number")
+            //             .HasColumnType("int4");
+            //
+            //         address.Property(y => y.City)
+            //             .HasColumnName("address_city")
+            //             .HasColumnType("varchar(40)");
+            //
+            //         address.Property(y => y.State)
+            //             .HasColumnName("address_state")
+            //             .HasColumnType("varchar(20)");
+            //
+            //         address.Property(y => y.ZipCode)
+            //             .HasColumnName("address_street")
+            //             .HasColumnType("char(8)");
+            //     });
         }
     }
 }

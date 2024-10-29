@@ -1,13 +1,13 @@
 ﻿using BlazorDiscoveryAPI.Domain.Base;
 using Microsoft.EntityFrameworkCore;
 
-namespace BlazorDiscovery.Infrastructure.Persistence.Base
+namespace BlazorDiscoveryAPI.Infrastructure.Persistence.Base
 {
-    public class BaseRepository<T> : IBaseRepository<T> where T : AggregateRoot
+    public class PostgresBaseRepository<T> : IBaseRepository<T> where T : AggregateRoot
     {
-        protected readonly DbContext Context;
+        private readonly DbContext Context;
         protected readonly DbSet<T> DbSet;
-        public BaseRepository(DbContext context)
+        public PostgresBaseRepository(DbContext context)
         {
             Context = context;
             DbSet = context.Set<T>();
@@ -25,17 +25,19 @@ namespace BlazorDiscovery.Infrastructure.Persistence.Base
 
         public async Task Create(T entity)
         {
-            await Context.AddAsync(entity);
+            await DbSet.AddAsync(entity);
         }
 
-        public void Delete(T entity)
+        public Task Delete(T entity)
         {
-            Context.Remove(entity);
+            DbSet.Remove(entity);
+            return Task.CompletedTask;
         }
 
-        public void Update(T entity)
+        public Task Update(T entity)
         {
-            Context.Update(entity);
+            DbSet.Update(entity);
+            return Task.CompletedTask;
         }
 
         public async Task Commit()

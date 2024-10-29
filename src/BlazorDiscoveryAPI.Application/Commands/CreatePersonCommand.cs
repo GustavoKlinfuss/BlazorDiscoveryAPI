@@ -5,7 +5,7 @@ namespace BlazorDiscoveryAPI.Application.Commands
 {
     public class CreatePersonCommand : IRequest<BaseResult>
     {
-        public CreatePersonCommand(string name, DateOnly birthDate, string document, CreatePersonCommandAddress address, string phone, string email)
+        public CreatePersonCommand(string name, DateTime birthDate, string document, CreatePersonCommandAddress address, string phone, string email)
         {
             Name = name;
             BirthDate = birthDate;
@@ -16,7 +16,7 @@ namespace BlazorDiscoveryAPI.Application.Commands
         }
 
         public string Name { get; init; }
-        public DateOnly BirthDate { get; init; }
+        public DateTime BirthDate { get; init; }
         public string Document { get; init; }
         public CreatePersonCommandAddress Address { get; init; }
         public string Phone { get; init; }

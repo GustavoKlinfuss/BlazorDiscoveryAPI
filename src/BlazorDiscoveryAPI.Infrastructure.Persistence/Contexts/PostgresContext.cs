@@ -1,10 +1,10 @@
-﻿using BlazorDiscovery.Infrastructure.Persistence.Mappings;
-using BlazorDiscoveryAPI.Domain.Base;
+﻿using BlazorDiscoveryAPI.Domain.Base;
+using BlazorDiscoveryAPI.Infrastructure.Persistence.Mappings;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.Extensions.Configuration;
 
-namespace BlazorDiscovery.Infrastructure.Persistence.Contexts
+namespace BlazorDiscoveryAPI.Infrastructure.Persistence.Contexts
 {
     public class PostgresContext : DbContext
     {

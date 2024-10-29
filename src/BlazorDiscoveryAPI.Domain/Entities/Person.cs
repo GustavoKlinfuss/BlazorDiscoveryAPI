@@ -1,11 +1,12 @@
 ﻿using BlazorDiscoveryAPI.Domain.Base;
+using MongoDB.Bson;
 
 namespace BlazorDiscoveryAPI.Domain.Entities
 {
     public class Person : AggregateRoot
     {
-        protected Person() { }
-        public Person(string name, DateOnly birthDate, string document, Address address, string phone, string email)
+        public Person() { }
+        public Person(string name, DateTime birthDate, string document, Address address, string phone, string email)
         {
             Name = name;
             BirthDate = birthDate;
@@ -16,7 +17,7 @@ namespace BlazorDiscoveryAPI.Domain.Entities
         }
 
         public string Name { get; init; }
-        public DateOnly BirthDate { get; init; }
+        public DateTime BirthDate { get; init; }
         public string Document { get; init; }
         public Address Address { get; init; }
         public string Phone { get; init; }
@@ -25,7 +26,7 @@ namespace BlazorDiscoveryAPI.Domain.Entities
 
     public class Address
     {
-        protected Address() { }
+        public Address() { }
         public Address(string street, int number, string city, string state, string zipCode)
         {
             Street = street;

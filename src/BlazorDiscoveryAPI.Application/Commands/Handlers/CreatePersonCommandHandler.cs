@@ -29,7 +29,6 @@ namespace BlazorDiscoveryAPI.Application.Commands.Handlers
                     request.Address.ZipCode),
                 request.Phone,
                 request.Email
-
                 );
             await _personRepository.Create(person);
             await _personRepository.Commit();

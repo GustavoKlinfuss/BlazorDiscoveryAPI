@@ -22,7 +22,7 @@ namespace BlazorDiscoveryAPI.Application.Commands.Outputs
         }
 
         public string Name { get; init; }
-        public DateOnly BirthDate { get; init; }
+        public DateTime BirthDate { get; init; }
         public string Document { get; init; }
         public CreatePersonCommandOutputAddress Address { get; init; }
         public string Phone { get; init; }
